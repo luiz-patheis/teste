@@ -23,6 +23,6 @@ jobs:
           PEM: batata
           
       - name: echo
-        run: echo "$PEM" > /home/batata.teste
+        run: echo "$PEM" > batata.teste
       - name: get batata
         run: cat /home/batata.teste
