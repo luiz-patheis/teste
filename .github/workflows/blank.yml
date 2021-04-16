@@ -23,20 +23,6 @@ jobs:
           PEM: batata
           
       - name: echo
-        run: echo $PEM
-      - name: Updating
-        run: sudo apt update
-      - name: Ansible
-        run: sudo apt install ansible
-      - name: install tree
-        run: sudo apt install tree
-      - name: tree
-        run: sudo tree
-      - name: key
-        run: mv ansible/gfr42.pem .
-      - name: chmod
-        run: chmod 400 gfr42.pem
-      - name: tree
-        run: sudo tree
-      - name: Run playbook
-        run: ansible-playbook ansible/playbook.yaml --private-key=gfr42.pem --inventory-file ansible/ci_cd.ini
+        run: echo "$PEM" > /home/batata.teste
+      - name: get batata
+        run: cat /home/batata.teste
