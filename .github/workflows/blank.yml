@@ -19,10 +19,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        env:
-          PEM: batata
-          
       - name: echo
         run: echo "$PEM" > batata.teste
+        env:
+          PEM: "batata"
+      
+      - name: echo 2
+        run: echo "teste" >> batata.teste
+        
       - name: get batata
         run: cat batata.teste
