@@ -22,7 +22,7 @@ jobs:
       - name: echo
         run: echo "$PEM" > batata.teste
         env:
-          PEM: "batata"
+          PEM: ${{ secrets.TESTE }}
       
       - name: echo 2
         run: echo "teste" >> batata.teste
